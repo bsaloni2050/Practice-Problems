@@ -14,19 +14,25 @@ public class DuplicateCharInString {
 
     public boolean Unique_Char ( String s)
     {
-        if(s.length()>256){
+        if(s.length()>256)
+        {
             System.out.println("legth");
-            return false;}
+            return false;
+        }
 
             boolean[] check_char = new boolean[256];
-        for (int i = 0; i < s.length(); i++) {
+
+        for (int i = 0; i < s.length(); i++)
+        {
               int h = s.charAt(i);
             if (check_char[h])
             {
-                System.out.println("at char "+s.charAt(i)); return false;}
-            else {
-                check_char[h] = true;
+                System.out.println("at char "+s.charAt(i)); return false;
             }
+            else
+                {
+                     check_char[h] = true;
+                 }
         }
         return true;
 
@@ -37,7 +43,8 @@ public class DuplicateCharInString {
         Arrays.sort(x);
         System.out.println(x);
 
-        for (int i = 1; i < x.length; i++) {
+        for (int i = 1; i < x.length; i++)
+        {
             if(x[i] == x[i-1]) return false;
         }
         return true;
