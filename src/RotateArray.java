@@ -8,12 +8,8 @@ public class RotateArray {
     public static void main(String[] args) {
        // System.out.println("hry");
         RotateArray r = new RotateArray();
-        //r.disp();
-       // r.rotate_right();
-        DuplicateCharInString ob = new DuplicateCharInString();
-        String s = "asdfyu";
-        boolean b = ob.Unique_Char(s);
-        System.out.println(b);
+        r.disp();
+        r.rotate_right();
 
     }
 
