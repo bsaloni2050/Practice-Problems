@@ -6,9 +6,10 @@ import java.util.Arrays;
 public class DuplicateCharInString {
     public static void main(String[] args) {
         DuplicateCharInString ob = new DuplicateCharInString();
-        String s = "rtgfdcv";
-        boolean b = ob.Unique_Char(s);
-        System.out.println(b);
+        String s = "rtyugiv";
+       // boolean b = ob.Unique_Char(s);
+       // System.out.println(b);
+        System.out.println(ob.Uniq_char__Sort(s));
     }
 
     public boolean Unique_Char ( String s)
@@ -35,6 +36,10 @@ public class DuplicateCharInString {
     {   char[] x = s.toCharArray();
         Arrays.sort(x);
         System.out.println(x);
+
+        for (int i = 1; i < x.length; i++) {
+            if(x[i] == x[i-1]) return false;
+        }
         return true;
     }
 
