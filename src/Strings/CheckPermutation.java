@@ -1,15 +1,18 @@
+package Strings;
+
 import java.util.Arrays;
 
 /**
  * Created by salonibindra on 1/14/17.
  */
 public class CheckPermutation {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         String a = "qwert";
         String b = "terwq";
 
-        CheckPermutation ob = new CheckPermutation();
-        System.out.println(ob.Validate(a,b));
+        CheckPermutation per = new CheckPermutation();
+        System.out.println(per.Validate(a,b));
     }
 
     public boolean Validate (String a , String b)
@@ -32,4 +35,6 @@ public class CheckPermutation {
         return (a1.equals(b2));
 
     }
+
+
 }
