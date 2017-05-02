@@ -1,3 +1,5 @@
+package Strings;
+
 import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 
 /**
@@ -5,7 +7,7 @@ import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
  */
 public class CompressString {
     public static void main(String[] args) {
-        String s = "aabbbcccd";
+        String s = "abcd";
         compessedCounts(s);
 
     }

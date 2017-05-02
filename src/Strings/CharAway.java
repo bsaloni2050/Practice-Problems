@@ -1,3 +1,5 @@
+package Strings;
+
 import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 
 /**
@@ -8,7 +10,7 @@ public class CharAway {
     public static void main(String[] args) {
         String str1 = "pale";
         int len1 = str1.length();
-        String str2 = "ale";
+        String str2 = "ple";
         int len2 = str2.length();
         int i = 0;
         int j = 0;
