@@ -1,0 +1,74 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class ZigZagDisplay {
+
+	public static void main(String rgs[]) {
+		String input = "PAYPALISHIRING";
+		int numberRows = 3;
+
+	//	System.out.println(zigZagConvertSB(input, numberRows));
+		System.out.println(zigZagConvertSBList(input, numberRows));
+
+
+	}
+
+	public static String zigZagConvertSB(String input, int numberRows) {
+		if (input == null || input.length() < 2 || numberRows < 1)
+			return input;
+
+		StringBuilder[] row = new StringBuilder[numberRows];
+		for (int i = 0; i < row.length; i++) {
+			row[i]= new StringBuilder("");
+			
+		}
+
+		int currentRow = 0;
+		Boolean goingDown = false;
+
+		for (int i = 0; i < input.length(); i++) {
+			
+			row[currentRow].append(input.charAt(i));
+			System.out.println(row[currentRow]);
+			if(currentRow==0 || currentRow == numberRows-1){
+
+				goingDown=!goingDown;
+				System.out.println("Going up!!");
+			}
+			currentRow+= goingDown?1:-1;
+			
+
+		}
+		StringBuilder result = new StringBuilder();
+		for(StringBuilder rows: row)
+			result.append(rows);
+		return result.toString();
+	}
+
+	
+	public static String zigZagConvertSBList(String input, int numberRows) {
+		
+		if(input== null || input.length()<numberRows || numberRows<2)
+			return input;
+		
+		List<StringBuilder> row = new ArrayList<>();
+		
+		int currentRow = 0;
+		int incre=1;
+		
+		for (int i = 0; i < input.length(); i++) {
+			row.get(currentRow).append(input.charAt(i));
+			if(currentRow==0)
+				incre=1;
+			if(currentRow== numberRows-1)
+				incre=-1;
+			currentRow+=incre;
+			
+		}
+		
+		return row.toString();
+		
+	}
+
+}
